@@ -4,7 +4,7 @@ mysql_root_pwd=$1
 app_dir=/app
 service=backend
 
-if [ -z "${mysql_root_pwd}"];then
+if [ -z "${mysql_root_pwd}" ]; then
 	echo sql_pwd_missing
 	exit 1
 fi
@@ -23,7 +23,7 @@ status $?
 
 print_activity "add_app_user"
 id expense &>>LOG
-if [ $? -ne 0 ];this
+if [ $? -ne 0 ]; then
 	useradd expense &>>LOG
 fi
 status $?
