@@ -49,5 +49,5 @@ dnf install mysql -y &>>LOG
 status $?
 
 print_activity "load_schema_to_db"
-mysql -h 172.31.7.157 -uroot -p${mysql_root_pwd} < /app/schema/backend.sql
+mysql -h 172.31.10.216 -uroot -p${mysql_root_pwd} < /app/schema/backend.sql
 status $?
