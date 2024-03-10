@@ -38,6 +38,12 @@ print_activity "install_node_dependencies"
 npm install &>>LOG
 status $?
 
+print_activity "restart_backend_service"
+systemctl daemon-reload &>>LOG
+systemctl enable backend &>>LOG
+systemctl start backend &>>LOG
+status $?
+
 print_activity "install_sql_client_to_load_schema"
 dnf install mysql -y &>>LOG
 status $?
