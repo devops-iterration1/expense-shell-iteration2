@@ -15,7 +15,7 @@ status() {
 }
 
 prepare_app() {
-	print_activity "remove_nginx_default_app"
+	print_activity "remove_default_app"
 	rm -rf ${app_dir} &>>LOG
 	status $?
 
